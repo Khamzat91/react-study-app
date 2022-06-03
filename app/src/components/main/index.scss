@@ -1,0 +1,15 @@
+.main{
+ &__inner{
+  display: flex;
+
+  &-left{
+   max-width: 584px;
+   margin-right: 94px;
+   margin-top: 102px;
+   margin-bottom: 82px;
+  }
+  &-right{
+   max-width: 560px;
+  }
+ }
+}
