@@ -1,0 +1,22 @@
+$black: #202020;
+$bg: #080B0E;
+$grey: #898C90;
+$text: #C1C1C1;
+
+
+
+
+@mixin f400 {
+ font-family: 'Inter', sans-serif;
+ font-weight: 400;
+}
+
+@mixin f500 {
+ font-family: 'Inter', sans-serif;
+ font-weight: 500;
+}
+
+@mixin f800 {
+ font-family: 'Inter', sans-serif;
+ font-weight: 800;
+}

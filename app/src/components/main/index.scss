@@ -1,15 +1,64 @@
-.main{
- &__inner{
+@import "../../scss/vars";
+
+.main {
+ display: flex;
+
+ &__inner {
   display: flex;
 
-  &-left{
+  &-left {
    max-width: 584px;
    margin-right: 94px;
    margin-top: 102px;
    margin-bottom: 82px;
   }
-  &-right{
+
+  &-right {
    max-width: 560px;
+   margin-top: 21px;
+   margin-bottom: 26px;
+   margin-right: 34px;
+  }
+
+  &-logo {
+   margin-bottom: 50px;
   }
  }
 }
+
+.main__left-title {
+ color: $black;
+ font-size: 72px;
+ line-height: 52px;
+ @include f800;
+}
+
+.main__left-subtitle {
+ color: $grey;
+ font-size: 34px;
+ line-height: 52px;
+ margin-top: 15px;
+ margin-bottom: 23px;
+ @include f500;
+}
+
+.main__left-images {
+ margin-bottom: 35px;
+}
+
+.about__title {
+ font-size: 24px;
+ line-height: 52px;
+ @include f800;
+ color: $bg;
+}
+
+.about__text {
+ font-size: 16px;
+ line-height: 28px;
+ color: #000;
+}
+
+
+
+
