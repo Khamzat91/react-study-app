@@ -1,0 +1,24 @@
+@import "../../scss/vars";
+
+
+.search {
+ display: flex;
+ position: relative;
+
+ input {
+  width: 100%;
+  padding: 21px 28px;
+  border: none;
+
+  &::placeholder {
+   color: #798FA8;
+  }
+ }
+
+ .search__close {
+  position: absolute;
+  right: 32px;
+  top: 21px;
+ }
+}
+

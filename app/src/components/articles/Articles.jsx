@@ -1,19 +1,13 @@
 import React from 'react';
-import logo from "../../images/logo.png";
 import views from "../../images/content/views.svg";
 import article from "../../images/content/article.png";
-import Container from "../Container";
 import "./index.scss"
 
 
 const Articles = () => {
   return (
       <div className="main__inner-right">
-        <div className="main__inner-logo">
-          <a href="#"><img src={logo} alt="logo"/></a>
-        </div>
         <div className="main__right-articles">
-
           <div className="main__right-article">
             <div className="main__right-title">
               Какой-то очень интересный заголовок

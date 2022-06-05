@@ -1,0 +1,16 @@
+
+
+.header{
+ padding: 21px 30px;
+ display: flex;
+ justify-content: space-between;
+}
+
+
+.header-icon{
+ cursor: pointer;
+ margin-left: 26px;
+ &:first-child {
+  margin-left: 0;
+ }
+}

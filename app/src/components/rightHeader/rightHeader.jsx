@@ -1,0 +1,25 @@
+import React from 'react';
+import "./index.scss";
+import logo from "../../images/logo.png";
+import search from "../../images/search.svg";
+import user from "../../images/user.svg";
+import edit from "../../images/edit.svg";
+import logout from "../../images/logout.svg";
+
+const RightHeader = () => {
+  const isAuth = true;
+  return (
+    <div className="header">
+      <a href="#"><img src={logo} alt="logo"/></a>
+      <div className="header-icons">
+        <img className="header-icon" src={search} alt=""/>
+        {isAuth ? <>
+          <img className="header-icon" src={edit} alt=""/>
+          <img className="header-icon" src={logout} alt=""/>
+        </> :  <img className="header-icon" src={user} alt=""/>}
+      </div>
+    </div>
+  );
+};
+
+export default RightHeader;

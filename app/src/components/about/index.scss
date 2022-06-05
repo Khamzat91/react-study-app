@@ -1,6 +1,6 @@
 @import "../../scss/vars";
 
-.main {
+.about {
  display: flex;
 
  &__inner {
@@ -19,21 +19,17 @@
    margin-bottom: 26px;
    margin-right: 34px;
   }
-
-  &-logo {
-   margin-bottom: 50px;
-  }
  }
 }
 
-.main__left-title {
+.about__left-title {
  color: $black;
  font-size: 72px;
  line-height: 52px;
  @include f800;
 }
 
-.main__left-subtitle {
+.about__left-subtitle {
  color: $grey;
  font-size: 34px;
  line-height: 52px;
@@ -42,7 +38,7 @@
  @include f500;
 }
 
-.main__left-images {
+.about__left-images {
  margin-bottom: 35px;
 }
 

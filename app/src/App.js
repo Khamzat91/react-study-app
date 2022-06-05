@@ -1,13 +1,16 @@
 import React from "react";
-import Main from "./components/main/main";
-import Loader from "./components/loader/loader";
+import Container from "./components/Container";
+import Menu from "./components/menu/menu";
+import Main from "./pages/main/main";
 
 
 function App() {
   return (
     <div>
-      {/*<Main/>*/}
-      <Loader/>
+      <Container>
+        <Main/>
+      </Container>
+      <Menu/>
     </div>
   );
 }

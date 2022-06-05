@@ -1,24 +1,20 @@
 import React from 'react';
-import Container from "../Container";
 import vasya from "../../images/content/vasya.png";
 
 import './index.scss';
-import Articles from "../articles/Articles";
-import Menu from "../menu/menu";
 
 
-const Main = () => {
+const About = () => {
   return (
-    <div className="main">
-      <Container>
-        <div className="main__inner">
-          <div className="main__inner-left">
-            <h2 className="main__left-title">Vasya Pupkin</h2>
-            <h4 className="main__left-subtitle">Блог фронтенд-разработчика</h4>
-            <div className="main__left-images">
-              <img src={vasya} alt="vasya"/>
+    <div className="about">
+        <div className="about__inner">
+          <div className="about__inner-left">
+            <h2 className="about__left-title">Vasya Pupkin</h2>
+            <h4 className="about__left-subtitle">Блог фронтенд-разработчика</h4>
+            <div className="about__left-images">
+          <img src={vasya} alt="vasya"/>
             </div>
-            <div className="main__inner-about">
+            <div className="about__inner-about">
               <div className="about__title">Обо мне</div>
               <div className="about__text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque diam arcu risus.
@@ -30,12 +26,9 @@ const Main = () => {
               </div>
             </div>
           </div>
-         <Articles/>
         </div>
-      </Container>
-      <Menu/>
     </div>
   );
 };
 
-export default Main;
+export default About;

@@ -1,0 +1,9 @@
+
+.main {
+ display: flex;
+ .about,
+ &__wrapper {
+  width: 50%;
+ }
+}
+
