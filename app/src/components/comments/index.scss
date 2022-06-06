@@ -1,0 +1,59 @@
+@import "../../scss/vars";
+
+
+.comment{
+ &__title {
+  font-size: 24px;
+  line-height: 24px;
+  @include f500;
+  color: $blue;
+  margin-top: 30px;
+  margin-bottom: 37px;
+ }
+ &__item{
+  margin-bottom: 48px;
+  &-head {
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 16px;
+  }
+  &-name{
+   font-size: 16px;
+   line-height: 18px;
+   color: $black;
+   @include f800;
+  }
+  &-text{
+   color: $bg;
+  }
+ }
+ &__form{
+  margin-bottom: 250px;
+
+  &-title{
+   color: $blue;
+   @include f500;
+   margin-bottom: 7px;
+  }
+  textarea{
+   max-width: 602px;
+   width: 100%;
+   height: 90px;
+   resize: none;
+   border-radius: 10px;
+   border: 1px solid #ECEEF1;
+  }
+  button{
+   border: none;
+   background-color: #FFDF36;
+   color: #68572D;
+   line-height: 19px;
+   border-radius: 12px;
+   padding: 13px 15px;
+   @include f500;
+   float: right;
+   margin-top: 22px;
+  }
+ }
+}
+

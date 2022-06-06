@@ -6,11 +6,12 @@ import search from "../../images/search.svg";
 import user from "../../images/user.svg";
 import "./index.scss";
 import RightHeader from "../../components/rightHeader/rightHeader";
+import FullArticle from "../../components/fullArticle/fullArticle";
 
 const Main = () => {
   return (
     <div className="main">
-      <About/>
+      <FullArticle/>
       <div className="main__wrapper">
       <RightHeader/>
       <Articles/>

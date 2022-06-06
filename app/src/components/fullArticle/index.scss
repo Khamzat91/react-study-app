@@ -1,0 +1,57 @@
+@import "../../scss/vars";
+
+
+.full-article {
+
+ &__images {
+  position: relative;
+
+  &-title {
+   font-size: 42px;
+   line-height: 52px;
+   color: #fff;
+   @include f800;
+   margin-top: 9px;
+  }
+
+  &-text{
+   color: rgba(255, 255, 255, 0.7);
+   margin-top: 14px;
+  }
+ }
+
+ &__wrapper {
+  max-width: 590px;
+  margin: 0 auto;
+ }
+
+ &__text{
+  margin-top: 37px;
+  margin-bottom: 6px;
+  color: $bg;
+  span{
+   color: #22AF5D;
+  }
+ }
+ &__list{
+  margin-top: 21px;
+ }
+ &__subtitle{
+  margin-top: 37px;
+  margin-bottom: 33px;
+  padding: 25px 10px 25px 30px;
+  color: $black;
+ &.active{
+  border-left: 4px solid #13315E;
+  height: 146px;
+ }
+ }
+}
+
+.main__right-box {
+ position: absolute;
+ top: 129px;
+ left: 72px;
+ max-width: 590px;
+
+}
