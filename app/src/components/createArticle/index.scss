@@ -2,6 +2,7 @@
 
 
 .create-article {
+ margin-bottom: 100px;
  &__title {
   font-size: 42px;
   line-height: 52px;
@@ -37,9 +38,11 @@
     height: 617px;
     resize: none;
     border: 1px solid $grey;
-    padding: 10px;
+    padding: 18px;
     outline: none;
     border-radius: 5px;
+    color: #0A3465;
+
    }
   }
  }
@@ -73,19 +76,46 @@
    margin-left: 15px;
   }
 
+  &.grey{
+   padding: 12px 29px 14px;
+   background-color: #D0D4DA;
+   margin-left: 15px;
+  }
+
   &.yellow{
    color: #68572D;
    background-color: #FFDF36;
-   margin-bottom: 100px;
    padding: 13px 16px;
    width: 160px;
    height: 45px;
-   margin-left: 440px;
+   margin-left: 445px;
+  }
+
+  &.delete {
+   color: #68572D;
+   background-color: #FFDF36;
+   padding: 13px 16px;
+   width: 160px;
+   height: 45px;
   }
 
   img {
    position: absolute;
    left: 17px;
   }
+ }
+ &__bottom{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 26px;
+  align-items: center;
+ button{
+  border: none;
+  color: #68572D;
+  font-size: 16px;
+  line-height: 19px;
+  margin-left: 30px;
+  @include f500;
+ }
  }
 }

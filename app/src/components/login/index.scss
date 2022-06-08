@@ -1,0 +1,70 @@
+@import "../../scss/vars";
+
+
+.login {
+ &__inner {
+  background-color: #fff;
+  border-radius: 12px;
+  form{
+   padding-left: 40px;
+   padding-right: 40px;
+   padding-bottom: 45px;
+   label{
+    display: block;
+    position: relative;
+    span{
+     color: $black;
+     @include f500;
+     font-size: 13px;
+     margin-bottom: 8px;
+    }
+    input{
+     display: block;
+     width: 366px;
+     border: none;
+     padding: 15px;
+     margin-bottom: 15px;
+    }
+    img{
+     position: absolute;
+     top: 40px;
+     right: 17px;
+    }
+   }
+   button{
+    width: 100%;
+    margin-top: 35px;
+    background-color: #FFDF36;
+    color: #68572D;
+    border-radius: 12px;
+    padding: 15px 160px;
+    text-align: center;
+    border: none;
+    line-height: 19px;
+    @include f500;
+   }
+  }
+ }
+
+ &__head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  padding-top: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  &-title {
+   font-size: 26px;
+   color: $bg;
+   @include f800;
+
+  }
+
+  img {
+   width: 16px;
+   height: 16px;
+   margin-top: 6px;
+  }
+ }
+}
