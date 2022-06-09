@@ -1,0 +1,39 @@
+@import "../../scss/vars";
+
+.pagination {
+ &__inner {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 39px;
+
+  &-images {
+   padding-left: 60px;
+  }
+
+  &-prev {
+   margin-right: 50px;
+   cursor: pointer;
+   &:hover{
+    path{
+     fill: #AEB3B7;
+    }
+   }
+  }
+
+  &-next {
+   cursor: pointer;
+   &:hover{
+    path{
+     fill: #AEB3B7;
+    }
+   }
+  }
+
+  &-text {
+   color: #AEB3B7;
+   font-size: 18px;
+   line-height: 22px;
+   @include f500;
+  }
+ }
+}

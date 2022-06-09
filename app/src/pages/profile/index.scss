@@ -1,0 +1,56 @@
+@import "../../scss/vars";
+
+
+.profile {
+ &__logo {
+  margin-top: 23px;
+  margin-left: 53px;
+ }
+
+ &__inner {
+  display: block;
+  width: 560px;
+  height: 670px;
+  margin: 176px auto;
+  &-title {
+   color: #0058D9;
+   font-size: 58px;
+   line-height: 52px;
+   @include f800;
+   display: block;
+  }
+  &-date{
+   font-size: 18px;
+   line-height: 52px;
+   color: $bg;
+   padding-top: 12px;
+   margin-bottom: 56px;
+   span{
+    @include f500;
+   }
+  }
+  &-items{
+   display: flex;
+   font-size: 14px;
+   line-height: 17px;
+   margin-bottom: 52px;
+  }
+  &-article{
+   padding-left: 30px;
+   color: $bg;
+   margin-right: 14px;
+   &.active{
+    color: #36B55A;
+   }
+  }
+  &-comment{
+   color: $bg;
+   &.active{
+    color: #36B55A;
+   }
+  }
+ }
+ .main__right-article {
+  padding: 21px 34px 21px 2px;
+ }
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import views from "../../images/content/views.svg";
 import article from "../../images/content/article.png";
 import "./index.scss"
+import Pagination from "../pagination/pagination";
 
 
 const Articles = () => {
@@ -29,6 +30,7 @@ const Articles = () => {
             <img src={article} alt=""/>
           </div>
         </div>
+        <Pagination/>
       </div>
   );
 };
