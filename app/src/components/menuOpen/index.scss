@@ -1,0 +1,68 @@
+@import "../../scss/vars";
+
+.menu-open {
+ height: 100vh;
+ background-color: $blue;
+ max-width: 400px;
+ width: 100%;
+ position: fixed;
+ top: 0;
+ right: 0;
+
+ &__inner {
+  padding: 26px 43px 0;
+
+  &-title {
+   font-size: 26px;
+   line-height: 52px;
+   color: #fff;
+   @include f800;
+  }
+
+  &-date {
+   font-size: 14px;
+   line-height: 52px;
+   color: rgba(255, 255, 255, 0.5);
+   @include f500;
+   margin-bottom: 20px;
+  }
+ }
+
+ &__page {
+  font-size: 14px;
+  line-height: 52px;
+  color: #fff;
+  @include f500;
+  padding: 0 43px;
+  cursor: pointer;
+  
+  &.active {
+   background-color: rgba(255, 255, 255, 0.06);
+  }
+ }
+
+ &__footer {
+  position: absolute;
+  bottom: 0;
+  width: 400px;
+  height: 78px;
+  background-color: #0A2246;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+
+ img{
+  width: 15px;
+  height: 15px;
+  margin-left: 35px;
+  margin-right: 11px;
+ }
+
+ &-menu{
+  font-size: 17px;
+  color: #fff;
+  @include f500;
+ }
+ }
+}

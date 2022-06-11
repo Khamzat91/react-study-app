@@ -9,6 +9,7 @@ import Registration from "./components/registration/registration";
 import Profile from "./pages/profile/profile";
 import Pagination from "./components/pagination/pagination";
 import Articles from "./components/articles/Articles";
+import MenuOpen from "./components/menuOpen/menuOpen";
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
         <Articles/>
         {/*<FullArticle/>*/}
       </Container>
-      <Menu/>
+      <MenuOpen/>
     </div>
   );
 }
