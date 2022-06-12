@@ -3,10 +3,20 @@ import views from "../../images/content/views.svg";
 import article from "../../images/content/article.png";
 import "./index.scss"
 import Pagination from "../pagination/pagination";
+import RightHeader from "../rightHeader/rightHeader";
+import Search from "../search/search";
 
 
 const Articles = () => {
+  const [toggle, setToggle] = React.useState(true);
+  const handleClickToggle = () => {
+    setToggle(!toggle);
+  }
+
+
   return (
+    <>
+      {toggle ? <RightHeader handleClickToggle={handleClickToggle}/> : <Search handleClickToggle={handleClickToggle}/>}
       <div className="main__inner-right">
         <div className="main__right-articles">
           <div className="main__right-article">
@@ -32,6 +42,7 @@ const Articles = () => {
         </div>
         <Pagination/>
       </div>
+    </>
   );
 };
 

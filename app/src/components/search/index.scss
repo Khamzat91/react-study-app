@@ -7,11 +7,12 @@
 
  input {
   width: 100%;
-  padding: 21px 28px;
+  padding: 29px 30px;
   border: none;
 
   &::placeholder {
    color: #798FA8;
+   font-size: 16px;
   }
  }
 
@@ -19,6 +20,10 @@
   position: absolute;
   right: 32px;
   top: 21px;
+
+  img{
+   cursor: pointer;
+  }
  }
 }
 

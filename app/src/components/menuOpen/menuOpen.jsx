@@ -6,7 +6,9 @@ const a = [
   {id: 1, title: 'Главная', isAuth: true}
 ]
 
-const MenuOpen = () => {
+const MenuOpen = ({handleClickMenu}) => {
+
+
   return (
     <div className="menu-open">
       <div className="menu-open__inner">
@@ -23,7 +25,7 @@ const MenuOpen = () => {
         <div className="menu-open__page">Выйти</div>
       </div>
       <div className="menu-open__footer">
-        <img src={menuOpen} alt=""/>
+        <img onClick={handleClickMenu} src={menuOpen} alt=""/>
         <div className="menu-open__footer-menu">МЕНЮ</div>
       </div>
     </div>

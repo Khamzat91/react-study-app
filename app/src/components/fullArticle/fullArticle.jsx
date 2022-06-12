@@ -47,7 +47,7 @@ const FullArticle = () => {
           porttitor pellentesque fringilla aliquet sit. Turpis arcu vitae quis nunc suscipit. Mattis scelerisque leo
           curabitur
         </div>
-        <Comments/>
+      <Comments/>
       </div>
     </div>
   );

@@ -1,26 +1,32 @@
 import React from "react";
 import Container from "./components/Container";
 import Menu from "./components/menu/menu";
-import Main from "./pages/main/main";
-import FullArticle from "./components/fullArticle/fullArticle";
-import Login from "./components/login/login";
-import RightHeader from "./components/rightHeader/rightHeader";
-import Registration from "./components/registration/registration";
-import Profile from "./pages/profile/profile";
-import Pagination from "./components/pagination/pagination";
-import Articles from "./components/articles/Articles";
 import MenuOpen from "./components/menuOpen/menuOpen";
+import {
+  Routes,
+  Route,
+} from "react-router-dom";
+import Main from "./pages/main/main";
+import Profile from "./pages/profile/profile";
 
 
 function App() {
+  const [isOpened, setIsOpened] = React.useState(false);
+
+  const handleClickMenu = () => {
+    setIsOpened(!isOpened)
+  }
+
   return (
+
     <div>
       <Container>
-
-        <Articles/>
-        {/*<FullArticle/>*/}
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="profile" element={<Profile />} />
+        </Routes>
       </Container>
-      <MenuOpen/>
+      {!isOpened ? <Menu handleClickMenu={handleClickMenu}/> : <MenuOpen handleClickMenu={handleClickMenu}/>}
     </div>
   );
 }
