@@ -18,7 +18,7 @@ const Profile = () => {
           <div className="profile__inner-article active">Статьи</div>
           <div className="profile__inner-comment">Комментарии</div>
         </div>
-        <Articles/>
+        <Articles isProfile={true}/>
       </div>
     </div>
   );

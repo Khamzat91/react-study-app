@@ -5,12 +5,14 @@ import CreateArticle from "../../components/createArticle/createArticle";
 import About from "../../components/about/about";
 import FullArticle from "../../components/fullArticle/fullArticle";
 
-const Main = () => {
+const Main = ({mainContentToggle}) => {
+
   return (
     <div className="main">
-      <About/>
+      {mainContentToggle === 'about' ? <About/> : mainContentToggle === 'createArticle' ? <CreateArticle/> :
+        <FullArticle/>}
       <div className="main__wrapper">
-      <Articles/>
+        <Articles/>
       </div>
     </div>
   );

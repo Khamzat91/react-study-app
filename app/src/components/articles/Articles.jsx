@@ -7,7 +7,7 @@ import RightHeader from "../rightHeader/rightHeader";
 import Search from "../search/search";
 
 
-const Articles = () => {
+const Articles = ({isProfile}) => {
   const [toggle, setToggle] = React.useState(true);
   const handleClickToggle = () => {
     setToggle(!toggle);
@@ -16,7 +16,7 @@ const Articles = () => {
 
   return (
     <>
-      {toggle ? <RightHeader handleClickToggle={handleClickToggle}/> : <Search handleClickToggle={handleClickToggle}/>}
+      {isProfile ? null : toggle ? <RightHeader handleClickToggle={handleClickToggle}/> : <Search handleClickToggle={handleClickToggle}/>}
       <div className="main__inner-right">
         <div className="main__right-articles">
           <div className="main__right-article">
@@ -40,7 +40,7 @@ const Articles = () => {
             <img src={article} alt=""/>
           </div>
         </div>
-        <Pagination/>
+        {!isProfile && <Pagination/>}
       </div>
     </>
   );

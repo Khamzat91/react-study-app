@@ -65,4 +65,11 @@
   @include f500;
  }
  }
+
+ &__pages{
+  a{
+   display: block;
+   text-decoration: none;
+  }
+ }
 }

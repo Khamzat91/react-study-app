@@ -1,13 +1,20 @@
 import React from 'react';
 import menuOpen from "../../images/menuOpen.svg";
+import {Link} from "react-router-dom";
 import "./index.scss";
 
-const a = [
-  {id: 1, title: 'Главная', isAuth: true}
-]
 
-const MenuOpen = ({handleClickMenu}) => {
+const MenuOpen = ({handleClickMenu, handleClickContentToggle}) => {
+  const [activeId, setActiveId] = React.useState(null);
 
+  const handleChangeActive = (pathname) => {
+    handleClickContentToggle(pathname)
+    setActiveId(pathname)
+  }
+
+  const addClassNameOpen = (pathname) => {
+    return "menu-open__page " + (activeId === pathname ? "active" : "")
+  }
 
   return (
     <div className="menu-open">
@@ -19,9 +26,12 @@ const MenuOpen = ({handleClickMenu}) => {
 
       </div>
       <div className="menu-open__pages">
-        <div className="menu-open__page active">Главная</div>
-        <div className="menu-open__page">Мой профиль</div>
-        <div className="menu-open__page">Создать запись</div>
+        <Link to="/" onClick={() => handleChangeActive('about')}
+              className={addClassNameOpen('about')}>Главная</Link>
+        <Link to="profile" onClick={() => handleChangeActive('profile')}
+              className={addClassNameOpen('profile')}>Мой профиль</Link>
+        <Link to="/" onClick={() => handleChangeActive('createArticle')}
+              className={addClassNameOpen('createArticle')}>Создать запись</Link>
         <div className="menu-open__page">Выйти</div>
       </div>
       <div className="menu-open__footer">
