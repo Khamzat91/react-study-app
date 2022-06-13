@@ -7,9 +7,10 @@ import {
   Route,
 } from "react-router-dom";
 import Main from "./pages/main/main";
-
 import {useDispatch, useSelector} from "react-redux";
 import Profile from "./pages/profile/profile";
+import Login from "./components/login/login";
+import Registration from "./components/registration/registration";
 
 
 function App() {
@@ -28,13 +29,17 @@ function App() {
     setMainContentToggle(pathname)
   }
 
+
+
   return (
 
     <div>
       <Container>
         <Routes>
           <Route path="/" element={<Main mainContentToggle={mainContentToggle}/>}/>
-          <Route path="profile" element={<Profile/>}/>
+          <Route path="/profile" element={<Profile/>}/>
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/registration" element={<Registration/>}/>
         </Routes>
       </Container>
       {!isOpened ? <Menu handleClickMenu={handleClickMenu}/> :

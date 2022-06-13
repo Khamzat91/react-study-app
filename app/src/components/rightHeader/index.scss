@@ -10,7 +10,9 @@
 .header-icon{
  cursor: pointer;
  margin-left: 26px;
- &:first-child {
-  margin-left: 0;
+ Link {
+  &:first-child {
+   margin-left: 0;
+  }
  }
 }
