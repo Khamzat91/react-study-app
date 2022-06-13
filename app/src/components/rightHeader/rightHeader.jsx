@@ -9,6 +9,9 @@ import logout from "../../images/logout.svg";
 const RightHeader = ({handleClickToggle}) => {
   const [isAuth, setIsAuth] = React.useState(false);
 
+  const handleClickIsAuth = () => {
+    
+  }
 
   return (
     <div className="header">
