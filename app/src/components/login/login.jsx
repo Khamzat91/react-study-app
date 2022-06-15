@@ -3,20 +3,25 @@ import btn from "../../images/btn.svg";
 import passwordIcon from "../../images/password.svg";
 import "./index.scss";
 import Layout from "../Layout/layout";
-import axios from "axios";
-import {Link, useNavigate } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
+import {useDispatch} from "react-redux";
+import {setUserData} from "../../redux/actions/user";
 
 const Login = ({setIsAuthOpenModal}) => {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
+  const dispatch = useDispatch();
   let navigate = useNavigate();
 
   const onSubmit = async (e) => {
-    e.preventDefault()
-    const data = {email, password}
-    const response = await axios.post('http://localhost:5656/auth/login', data)
-    localStorage.setItem('loginData', JSON.stringify(response))
-    navigate("/profile");
+    try {
+      e.preventDefault()
+      const data = {email, password}
+      await dispatch(setUserData(data, 'login'))
+      navigate("/profile");
+    } catch (e) {
+      alert(e.response.data.error || 'Какая-то ошибка')
+    }
   }
 
   const handleChangeEmail = (e) => {
@@ -41,7 +46,8 @@ const Login = ({setIsAuthOpenModal}) => {
             </label>
             <label className="form__password">
               <span>Пороль</span>
-              <input value={password} onChange={handleChangePassword} name="password" type="password" placeholder="password..."/>
+              <input value={password} onChange={handleChangePassword} name="password" type="password"
+                     placeholder="password..."/>
               <img src={passwordIcon} alt=""/>
             </label>
             <button type="submit">Войти</button>

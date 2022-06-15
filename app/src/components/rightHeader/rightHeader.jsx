@@ -1,6 +1,6 @@
 import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {setIsAuth} from "../../redux/actions/user";
 import logo from "../../images/logo.png";
 import search from "../../images/search.svg";
@@ -13,9 +13,12 @@ import "./index.scss";
 const RightHeader = ({handleClickToggle}) => {
   const dispatch = useDispatch();
   const isAuth = useSelector(state => state.user.isAuth);
+  const navigate = useNavigate();
 
   const handleClickIsAuth = () => {
     dispatch(setIsAuth(!isAuth))
+    localStorage.removeItem('user')
+    navigate('/')
   }
 
   return (

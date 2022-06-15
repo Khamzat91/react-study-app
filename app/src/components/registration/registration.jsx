@@ -3,19 +3,27 @@ import Layout from "../Layout/layout";
 import btn from "../../images/btn.svg";
 import passwordIcons from "../../images/password.svg";
 import "./index.scss"
-import axios from "axios";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
+import {setUserData} from "../../redux/actions/user";
+import {useDispatch} from "react-redux";
 
 const Registration = () => {
   const [fullName, setFullName] = React.useState('');
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
 
+  const dispatch = useDispatch();
+  let navigate = useNavigate();
+
   const onSubmit = async (e) => {
-    e.preventDefault();
-    const data = {fullName, email, password}
-    const response = await axios.post('http://localhost:5656/auth/register', data)
-    localStorage.setItem('registerData', JSON.stringify(response))
+   try {
+     e.preventDefault();
+     const data = {fullName, email, password}
+     await dispatch(setUserData(data, 'register'))
+     navigate("/profile");
+   } catch (e) {
+     alert(e.response.data.error || 'Неверные данные...')
+   }
   }
 
   const handleOnChangeText = (e) => {
