@@ -11,10 +11,13 @@ const options = {
   minute: 'numeric',
   second: 'numeric'
 }
-const user = JSON.parse(localStorage.getItem('user'))
-const date = new Date(user?.createAt)
+
 
 const Profile = () => {
+  const user = JSON.parse(localStorage.getItem('user'))
+  const date = new Date(user?.createAt)
+
+
   return (
     <div className="profile">
       <div className="profile__logo">

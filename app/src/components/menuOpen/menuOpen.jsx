@@ -2,7 +2,8 @@ import React from 'react';
 import menuOpen from "../../images/menuOpen.svg";
 import {Link, useNavigate} from "react-router-dom";
 import "./index.scss";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import {setIsAuth} from "../../redux/actions/user";
 
 const options = {
   year: 'numeric',
@@ -17,6 +18,7 @@ const MenuOpen = ({handleClickMenu, handleClickContentToggle}) => {
   const [activeId, setActiveId] = React.useState(null);
   const navigate = useNavigate();
   const isAuth = useSelector(state => state.user.isAuth);
+  const dispatch = useDispatch();
 
   const handleChangeActive = (pathname) => {
     handleClickContentToggle(pathname)
@@ -30,7 +32,7 @@ const MenuOpen = ({handleClickMenu, handleClickContentToggle}) => {
 
   const handleRemoveUser = () => {
     localStorage.removeItem('user')
-    
+    dispatch(setIsAuth(!isAuth))
     navigate('/')
   }
 
@@ -41,10 +43,12 @@ const MenuOpen = ({handleClickMenu, handleClickContentToggle}) => {
   return (
     <div className="menu-open">
       <div className="menu-open__inner">
-        <div className="menu-open__inner-title">{user?.fullName}</div>
-        <div className="menu-open__inner-date">
-          Дата регистрации: {date.toLocaleDateString("ru-RU", options)}
-        </div>
+        {isAuth && <>
+          <div className="menu-open__inner-title">{user?.fullName}</div>
+          <div className="menu-open__inner-date">
+            Дата регистрации: {date.toLocaleDateString("ru-RU", options)}
+          </div>
+        </>}
 
       </div>
       <div className="menu-open__pages">
@@ -54,7 +58,8 @@ const MenuOpen = ({handleClickMenu, handleClickContentToggle}) => {
                            className={addClassNameOpen('profile')}>Мой профиль</Link>
           <Link to="/" onClick={() => handleChangeActive('createArticle')}
                 className={addClassNameOpen('createArticle')}>Создать запись</Link>
-          <div onClick={handleRemoveUser} className="menu-open__page">Выйти</div></>}
+          <div onClick={handleRemoveUser} className="menu-open__page">Выйти</div>
+        </>}
       </div>
       <div className="menu-open__footer">
         <img onClick={handleClickMenu} src={menuOpen} alt=""/>

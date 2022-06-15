@@ -11,13 +11,14 @@ import {useDispatch, useSelector} from "react-redux";
 import Profile from "./pages/profile/profile";
 import Login from "./components/login/login";
 import Registration from "./components/registration/registration";
+import {setIsAuth} from "./redux/actions/user";
 
 
 function App() {
   const [isOpened, setIsOpened] = React.useState(false);
   const [mainContentToggle, setMainContentToggle] = React.useState('about');
   const dispatch = useDispatch();
-  const state = useSelector(state => state)
+  const isAuth = useSelector(state => state.user.isAuth);
 
 
   const handleClickMenu = () => {
@@ -29,17 +30,21 @@ function App() {
     setMainContentToggle(pathname)
   }
 
-
+  React.useEffect(() => {
+    if (localStorage.getItem('user')) {
+      dispatch(setIsAuth(true))
+    }
+  }, [])
 
   return (
-
     <div>
       <Container>
         <Routes>
           <Route path="/" element={<Main mainContentToggle={mainContentToggle}/>}/>
-          <Route path="/profile" element={<Profile/>}/>
+          {isAuth && <Route path="/profile" element={<Profile/>}/>}
           <Route path="/login" element={<Login/>}/>
           <Route path="/registration" element={<Registration/>}/>
+          <Route path="*" element={<h1>404</h1>}/>
         </Routes>
       </Container>
       {!isOpened ? <Menu handleClickMenu={handleClickMenu}/> :
