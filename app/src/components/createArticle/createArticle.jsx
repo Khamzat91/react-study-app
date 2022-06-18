@@ -6,6 +6,11 @@ const CreateArticle = () => {
   const [file, setFile] = React.useState();
   const loadImage = false;
   const editHold = false;
+
+  const handleChangeFile = (e) => {
+    setFile(e.target.files[0])
+  }
+
   return (
     <div className="create-article">
       <div className="create-article__title">
@@ -23,8 +28,9 @@ const CreateArticle = () => {
             Ссылка на изображение:
           </div>
           <div className="input__wrapper">
-            <input name="file" type="file" id="input__file" onChange={}
+            <input name="file" type="file" id="input__file" onChange={handleChangeFile}
                    className="input input__file"/>
+            {file}
             <label htmlFor="input__file" className="input__file-button">
               {loadImage ? <div className="create-article__btn grey">Загрузка...</div> :
                 <span className="input__file-button-text">
