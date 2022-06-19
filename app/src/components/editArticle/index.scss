@@ -62,11 +62,10 @@
   }
 
   .input__file {
+   opacity: 0;
    overflow: hidden;
-   display: none;
-   span{
-    width: 100%;
-   }
+   cursor: pointer;
+   width: 100%;
   }
 
   .input__file-button-text {

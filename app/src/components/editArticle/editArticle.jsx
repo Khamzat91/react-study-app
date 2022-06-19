@@ -1,50 +1,27 @@
 import React from 'react';
 import load from "../../images/load.svg";
 import "./index.scss";
-import {createArticle} from "../../redux/actions/articles";
-import {useDispatch} from "react-redux";
 
-const CreateArticle = () => {
+const EditArticle = () => {
   const [data, setData] = React.useState({
-    file: '',
+    file: null,
     title: '',
     text: '',
     description: ''
   });
-  const [loadImage, setLoadImage] = React.useState(false);
 
-  const dispatch = useDispatch();
 
-  // const handleChangeFile = async (e) => {
-  //   e.preventDefault()
-  //   setData({...data, e.target.files[0]})
-  // }
 
   const handleChangeField = (e) => {
     setData({...data, [e.target.name]: e.target.value})
   }
 
-  const onSubmit = async () => {
-    try {
-      await dispatch(createArticle(data, 'posts'))
-      setLoadImage(true)
-      setData({
-        file: '',
-        title: '',
-        text: '',
-        description: ''
-      })
-    } catch (e) {
-      console.error(e)
-      setLoadImage(false)
-    }
-  }
+
 
   return (
     <div className="create-article">
       <div className="create-article__title">
-        <input name="title" value={data.title} onChange={(e) => handleChangeField(e)} type="text"
-               placeholder="Введите заголовок..."/>
+        <input name="title" value={data.title} onChange={(e) => handleChangeField(e)} type="text" placeholder="Введите заголовок..."/>
       </div>
       <div className="create-article__items">
         <div className="create-article__item top">
@@ -60,13 +37,12 @@ const CreateArticle = () => {
           <div className="input__wrapper">
             <input value={data.file} name="file" type="file" id="input__file" onChange={(e) => handleChangeField(e)}
                    className="input input__file"/>
-            <span>{data.file}</span>
+            {data.file}
             <label htmlFor="input__file" className="input__file-button">
-              {loadImage ? <div className="create-article__btn grey">Загрузка...</div> :
                 <span className="input__file-button-text">
                     <img className="input__file-icon" src={load} alt="Выбрать файл" width="25"/>
                     Загрузить
-                  </span>}
+                  </span>
             </label>
           </div>
         </div>
@@ -75,13 +51,16 @@ const CreateArticle = () => {
             Полное описание
           </div>
           <textarea name="description" value={data.description} onChange={(e) => handleChangeField(e)}/>
-          <div onClick={onSubmit} className="create-article__btn yellow">
-            Опубликовать
-          </div>
+              <div className="create-article__bottom">
+                <button>Удалить</button>
+                <div className="create-article__btn delete">
+                  Сохранить
+                </div>
+              </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default CreateArticle;
+export default EditArticle;

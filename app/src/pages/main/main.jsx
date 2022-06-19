@@ -9,8 +9,9 @@ const Main = ({mainContentToggle}) => {
 
   return (
     <div className="main">
-      {mainContentToggle === 'about' ? <About/> : mainContentToggle === 'createArticle' ? <CreateArticle/> :
-        <FullArticle/>}
+      {/*{mainContentToggle === 'about' ? <About/> : mainContentToggle === 'createArticle' ? <CreateArticle/> :*/}
+      {/*  <FullArticle/>}*/}
+      <CreateArticle/>
       <div className="main__wrapper">
         <Articles/>
       </div>

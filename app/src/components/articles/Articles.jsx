@@ -5,40 +5,39 @@ import "./index.scss"
 import Pagination from "../pagination/pagination";
 import RightHeader from "../rightHeader/rightHeader";
 import Search from "../search/search";
+import {useDispatch, useSelector} from "react-redux";
+import {getArticles} from "../../redux/actions/articles";
+import Article from "../../article/article";
 
 
 const Articles = ({isProfile}) => {
   const [toggle, setToggle] = React.useState(true);
+  const dispatch = useDispatch();
+  const articles = useSelector(state => state.articles.data);
   const handleClickToggle = () => {
     setToggle(!toggle);
   }
+  console.log(articles)
+  React.useEffect(() => {
+    dispatch(getArticles())
+  }, [])
 
 
   return (
     <>
-      {isProfile ? null : toggle ? <RightHeader handleClickToggle={handleClickToggle}/> : <Search handleClickToggle={handleClickToggle}/>}
+      {isProfile ? null : toggle ? <RightHeader handleClickToggle={handleClickToggle}/> :
+        <Search handleClickToggle={handleClickToggle}/>}
       <div className="main__inner-right">
         <div className="main__right-articles">
-          <div className="main__right-article">
-            <div className="main__right-title">
-              Какой-то очень интересный заголовок
-            </div>
-            <div className="main__right-text">
-              На работе потребовалось запилить задачу для автоматического определения города при совершении заказа.
-            </div>
-            <div className="main__right-data">
-              <div className="main__right-date">
-                12 августа 2019 в 08:06
-              </div>
-              <div className="main__right-views">
-                <img src={views} alt=""/>
-                <span>301</span>
-              </div>
-            </div>
-          </div>
-          <div className="main__right-images">
-            <img src={article} alt=""/>
-          </div>
+          {articles?.map((obj) => <Article key={obj._id}
+                                           title={obj.title}
+                                           text={obj.text}
+                                           description={obj.description}
+                                           views={obj.views}
+                                           createdAt={obj.createdAt}
+
+          />)}
+
         </div>
         {!isProfile && <Pagination/>}
       </div>
