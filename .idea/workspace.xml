@@ -20,22 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f212264-8228-44cd-a60a-d54083258ed1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/article/article.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/article/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/components/editArticle/editArticle.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/components/editArticle/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/redux/actions/articles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/redux/reducer/articles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/components/articles/Articles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/articles/Articles.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/components/articles/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/articles/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/components/createArticle/createArticle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/createArticle/createArticle.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/components/createArticle/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/createArticle/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/main/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/main/main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/redux/actions/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/redux/actions/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/redux/redux.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/redux/redux.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/components/search/search.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/search/search.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/redux/actions/articles.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/redux/actions/articles.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,22 +113,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="828" y="431" key="#ESLint/0.0.1920.1040@0.0.1920.1040" timestamp="1655490405483" />
-    <state width="1899" height="182" key="GridCell.Tab.0.bottom" timestamp="1655632039735">
+    <state width="1899" height="182" key="GridCell.Tab.0.bottom" timestamp="1655670420406">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="182" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1655632039735" />
-    <state width="1899" height="182" key="GridCell.Tab.0.center" timestamp="1655632039735">
+    <state width="1899" height="182" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1655670420406" />
+    <state width="1899" height="182" key="GridCell.Tab.0.center" timestamp="1655670420406">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="182" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1655632039735" />
-    <state width="1899" height="182" key="GridCell.Tab.0.left" timestamp="1655632039735">
+    <state width="1899" height="182" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1655670420406" />
+    <state width="1899" height="182" key="GridCell.Tab.0.left" timestamp="1655670420405">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="182" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1655632039735" />
-    <state width="1899" height="182" key="GridCell.Tab.0.right" timestamp="1655632039735">
+    <state width="1899" height="182" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1655670420405" />
+    <state width="1899" height="182" key="GridCell.Tab.0.right" timestamp="1655670420406">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="182" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1655632039735" />
+    <state width="1899" height="182" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1655670420406" />
     <state x="461" y="165" width="998" height="848" key="SettingsEditor" timestamp="1655647164241">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

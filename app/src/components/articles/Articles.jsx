@@ -1,6 +1,4 @@
 import React from 'react';
-import views from "../../images/content/views.svg";
-import article from "../../images/content/article.png";
 import "./index.scss"
 import Pagination from "../pagination/pagination";
 import RightHeader from "../rightHeader/rightHeader";
@@ -14,9 +12,14 @@ const Articles = ({isProfile}) => {
   const [toggle, setToggle] = React.useState(true);
   const dispatch = useDispatch();
   const articles = useSelector(state => state.articles.data);
+
   const handleClickToggle = () => {
     setToggle(!toggle);
+    if (!toggle){
+      dispatch(getArticles(''))
+    }
   }
+
   console.log(articles)
   React.useEffect(() => {
     dispatch(getArticles())
