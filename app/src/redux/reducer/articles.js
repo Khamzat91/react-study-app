@@ -1,7 +1,7 @@
 const initialState = {
-data: []
+  data: [],
+  article: null
 }
-
 
 
 export const articles = (state = initialState, action) => {
@@ -10,6 +10,11 @@ export const articles = (state = initialState, action) => {
       return {
         ...state,
         data: action.payload
+      }
+    case 'SET_SHOW_ARTICLE':
+      return {
+        ...state,
+        article: action.payload
       }
     default:
       return state;

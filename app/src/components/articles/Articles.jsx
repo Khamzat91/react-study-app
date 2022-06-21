@@ -20,7 +20,6 @@ const Articles = ({isProfile}) => {
     }
   }
 
-  console.log(articles)
   React.useEffect(() => {
     dispatch(getArticles())
   }, [])
@@ -33,6 +32,7 @@ const Articles = ({isProfile}) => {
       <div className="main__inner-right">
         <div className="main__right-articles">
           {articles?.map((obj) => <Article key={obj._id}
+                                           id={obj._id}
                                            title={obj.title}
                                            text={obj.text}
                                            description={obj.description}

@@ -56,7 +56,7 @@ const MenuOpen = ({handleClickMenu, handleClickContentToggle}) => {
               className={addClassNameOpen('about')}>Главная</Link>
         {isAuth && <><Link to="profile" onClick={() => handleChangeActive('profile')}
                            className={addClassNameOpen('profile')}>Мой профиль</Link>
-          <Link to="/" onClick={() => handleChangeActive('createArticle')}
+          <Link to="/createArticle" onClick={() => handleChangeActive('createArticle')}
                 className={addClassNameOpen('createArticle')}>Создать запись</Link>
           <div onClick={handleRemoveUser} className="menu-open__page">Выйти</div>
         </>}

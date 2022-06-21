@@ -2,6 +2,7 @@ import React from 'react';
 import view from "../images/content/views.svg";
 import article from "../images/content/article.png";
 import "./index.scss";
+import {useNavigate} from "react-router-dom";
 
 const options = {
   year: 'numeric',
@@ -10,12 +11,16 @@ const options = {
   hour: 'numeric',
   minute: 'numeric'
 }
-const Article = ({title, text, createdAt, views}) => {
-
+const Article = ({id, title, text, createdAt, views}) => {
+const navigate = useNavigate()
   const date = new Date(createdAt)
-  console.log(date, createdAt)
+
+  const handleClick = () => {
+    navigate(`/fullArticle/${id}`)
+  }
+
   return (
-    <div className="main__right-article">
+    <div onClick={handleClick} className="main__right-article">
       <div className="main__right-article__wrapper">
         <div className="main__right-title">
           {title}

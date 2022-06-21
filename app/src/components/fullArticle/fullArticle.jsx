@@ -3,8 +3,20 @@ import "./index.scss"
 import views from "../../images/content/views.svg";
 import fullArticle from "../../images/content/fullArticle.png";
 import Comments from "../comments/comments";
+import {useDispatch, useSelector} from "react-redux";
+import {showArticle} from "../../redux/actions/articles";
+import {useParams} from "react-router-dom";
 
 const FullArticle = () => {
+  const { id } = useParams()
+  const dispatch = useDispatch();
+  const state = useSelector(state => state)
+
+  React.useEffect(() => {
+    dispatch(showArticle(id))
+  }, [])
+
+
   return (
     <div className="full-article">
       <div className="full-article__images">
@@ -47,7 +59,7 @@ const FullArticle = () => {
           porttitor pellentesque fringilla aliquet sit. Turpis arcu vitae quis nunc suscipit. Mattis scelerisque leo
           curabitur
         </div>
-      <Comments/>
+        <Comments/>
       </div>
     </div>
   );
