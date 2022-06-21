@@ -3,6 +3,7 @@
 
 .main__right-article{
  padding: 21px 34px 21px 30px;
+ cursor: pointer;
 
  &.active {
   border-left: 4px solid #13315E;
@@ -21,10 +22,7 @@
   justify-content: space-between;
  }
 
- //&-box{
- // display: flex;
- // justify-content: space-between;
- //}
+
 
  &-title {
   font-size: 24px;

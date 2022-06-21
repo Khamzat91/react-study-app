@@ -2,7 +2,7 @@ import React from 'react';
 import view from "../images/content/views.svg";
 import article from "../images/content/article.png";
 import "./index.scss";
-import {useNavigate} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 
 const options = {
   year: 'numeric',
@@ -12,7 +12,8 @@ const options = {
   minute: 'numeric'
 }
 const Article = ({id, title, text, createdAt, views}) => {
-const navigate = useNavigate()
+  const param = useParams()
+  const navigate = useNavigate()
   const date = new Date(createdAt)
 
   const handleClick = () => {
@@ -20,7 +21,7 @@ const navigate = useNavigate()
   }
 
   return (
-    <div onClick={handleClick} className="main__right-article">
+    <div onClick={handleClick} className={`main__right-article ${param.id === id && "active"}`}>
       <div className="main__right-article__wrapper">
         <div className="main__right-title">
           {title}
