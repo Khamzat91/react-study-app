@@ -1,27 +1,51 @@
 import React from 'react';
 import load from "../../images/load.svg";
 import "./index.scss";
+import {useDispatch, useSelector} from "react-redux";
+import {editArticle, editArticleDelete} from "../../redux/actions/articles";
+import {useNavigate} from "react-router-dom";
 
 const EditArticle = () => {
+  const article = useSelector(state => state.articles.article)
+  const dispatch = useDispatch();
+  const navigate = useNavigate()
   const [data, setData] = React.useState({
     file: null,
     title: '',
     text: '',
     description: ''
   });
-
-
-
+  console.log(article)
   const handleChangeField = (e) => {
     setData({...data, [e.target.name]: e.target.value})
   }
 
+  const handleClickEdit = () => {
+    dispatch(editArticle(article._id, data))
+  }
+
+  const handleClickDelete = () => {
+    dispatch(editArticleDelete(article._id, data))
+    navigate('/')
+  }
+
+  React.useEffect(() => {
+    if (article) {
+      setData({
+        description: article.description,
+        title: article.title,
+        text: article.text,
+      })
+    }
+
+  }, [article])
 
 
   return (
     <div className="create-article">
       <div className="create-article__title">
-        <input name="title" value={data.title} onChange={(e) => handleChangeField(e)} type="text" placeholder="Введите заголовок..."/>
+        <input name="title" value={data.title} onChange={(e) => handleChangeField(e)} type="text"
+               placeholder="Введите заголовок..."/>
       </div>
       <div className="create-article__items">
         <div className="create-article__item top">
@@ -51,12 +75,12 @@ const EditArticle = () => {
             Полное описание
           </div>
           <textarea name="description" value={data.description} onChange={(e) => handleChangeField(e)}/>
-              <div className="create-article__bottom">
-                <button>Удалить</button>
-                <div className="create-article__btn delete">
-                  Сохранить
-                </div>
-              </div>
+          <div className="create-article__bottom">
+            <button onClick={handleClickDelete}>Удалить</button>
+            <div onClick={handleClickEdit} className="create-article__btn delete">
+              Сохранить
+            </div>
+          </div>
         </div>
       </div>
     </div>

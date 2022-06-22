@@ -23,7 +23,7 @@ const Comments = () => {
       </div>
       <div className="comment__form">
         <div className="comment__form-title">Добавить комментарий</div>
-        <textarea></textarea>
+        <textarea/>
         <button>Отправить</button>
       </div>
     </div>

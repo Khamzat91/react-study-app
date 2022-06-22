@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import About from "../../components/about/about";
 import FullArticle from "../../components/fullArticle/fullArticle";
+import EditArticle from "../../components/editArticle/editArticle";
 
 const Main = () => {
 
@@ -16,6 +17,7 @@ const Main = () => {
       <Routes>
         <Route path="/" element={<About/>}/>
         <Route path="/createArticle" element={<CreateArticle/>}/>
+        <Route path="/editArticle" element={<EditArticle/>}/>
         <Route path="/fullArticle/:id" element={<FullArticle/>}/>
       </Routes>
       <div className="main__wrapper">

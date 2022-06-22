@@ -15,6 +15,7 @@ import {setIsAuth} from "./redux/actions/user";
 import About from "./components/about/about";
 import CreateArticle from "./components/createArticle/createArticle";
 import FullArticle from "./components/fullArticle/fullArticle";
+import EditArticle from "./components/editArticle/editArticle";
 
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
           <Route path="/" element={<Main mainContentToggle={mainContentToggle}/>}>
             <Route index element={<About/>}/>
             <Route path="/createArticle" element={<CreateArticle/>}/>
+            <Route path="/editArticle" element={<EditArticle/>}/>
             <Route path="/fullArticle/:id" element={<FullArticle/>}/>
           </Route>
           {isAuth && <Route path="/profile" element={<Profile/>}/>}

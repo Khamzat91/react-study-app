@@ -12,7 +12,6 @@ const CreateArticle = () => {
     description: ''
   });
   const [loadImage, setLoadImage] = React.useState(false);
-
   const dispatch = useDispatch();
 
   // const handleChangeFile = async (e) => {
@@ -26,7 +25,7 @@ const CreateArticle = () => {
 
   const onSubmit = async () => {
     try {
-      await dispatch(createArticle(data, 'posts'))
+      await dispatch(createArticle(data))
       setLoadImage(true)
       setData({
         file: '',
