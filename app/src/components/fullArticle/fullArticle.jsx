@@ -6,6 +6,7 @@ import Comments from "../comments/comments";
 import {useDispatch, useSelector} from "react-redux";
 import {showArticle} from "../../redux/actions/articles";
 import {useParams, Link} from "react-router-dom";
+import {getComments} from "../../redux/actions/comments";
 
 const options = {
   year: 'numeric',
@@ -19,10 +20,10 @@ const FullArticle = () => {
   const {id} = useParams()
   const article = useSelector(state => state.articles.article)
   const dispatch = useDispatch();
-  console.log(article)
 
   React.useEffect(() => {
     dispatch(showArticle(id))
+    dispatch(getComments(id))
   }, [id])
 
   const date = new Date(article?.createdAt)

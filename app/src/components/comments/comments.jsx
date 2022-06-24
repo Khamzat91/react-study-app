@@ -1,30 +1,42 @@
 import React from 'react';
 import "./index.scss"
+import {useDispatch, useSelector} from "react-redux";
+import Comment from "./comment";
+import {createComment} from "../../redux/actions/comments";
+import {useParams} from "react-router-dom";
 
 
 const Comments = () => {
+  const {id} = useParams()
+  const dispatch = useDispatch();
+  const comments = useSelector(state => state.comments.comments)
+  const [text, setText] = React.useState('');
+
+  console.log(comments)
+
+  const handleChangeComment = (e) => {
+    setText(e.target.value)
+  }
+
+  const handleClickComment = async () => {
+   await dispatch(createComment({text: text, postId: id}))
+    setText('')
+  }
+
   return (
     <div className="comment">
-      <div className="comment__title">Комментарии (3)</div>
+      <div className="comment__title">Комментарии {comments.length}</div>
       <div className="comment__items">
-        <div className="comment__item">
-          <div className="comment__item-head">
-            <div className="comment__item-name">Vasya Pupkin</div>
-            <div className="main__right-data">
-              <div className="main__right-date">
-                12 августа 2019 в 08:06
-              </div>
-            </div>
-          </div>
-          <div className="comment__item-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor adipiscing leo id sed neque, diam nibh.
-          </div>
-        </div>
+        {comments.map((obj) => <Comment key={obj._id}
+                                        text={obj.text}
+                                        fullName={obj.user.fullName}
+                                        createdAt={obj.createdAt}
+        />)}
       </div>
       <div className="comment__form">
         <div className="comment__form-title">Добавить комментарий</div>
-        <textarea/>
-        <button>Отправить</button>
+        <textarea value={text} onChange={handleChangeComment}/>
+        <button onClick={handleClickComment}>Отправить</button>
       </div>
     </div>
   );
