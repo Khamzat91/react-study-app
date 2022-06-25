@@ -20,14 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f212264-8228-44cd-a60a-d54083258ed1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/components/comments/comment.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/redux/actions/comments.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/redux/reducer/comments.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/components/comments/comment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/comments/comment.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/components/comments/comments.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/comments/comments.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/components/comments/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/comments/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/components/fullArticle/fullArticle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/fullArticle/fullArticle.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/redux/redux.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/redux/redux.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/components/editArticle/editArticle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/editArticle/editArticle.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/redux/actions/articles.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/redux/actions/articles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/redux/actions/comments.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/redux/actions/comments.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-api-master/controllers/Comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog-api-master/controllers/Comment.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +68,7 @@
       <recent name="C:\Users\Khamza\Desktop\new_www\tutorial-end\src\react-study-app-blog\app\src\components" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/blog-api-master/package.json" />
       <command value="run" />
@@ -91,8 +91,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
   </component>
@@ -123,22 +123,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="716" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1656085910603" />
-    <state width="1899" height="183" key="GridCell.Tab.0.bottom" timestamp="1656099935321">
+    <state width="1899" height="183" key="GridCell.Tab.0.bottom" timestamp="1656185523194">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="183" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1656099935321" />
-    <state width="1899" height="183" key="GridCell.Tab.0.center" timestamp="1656099935321">
+    <state width="1899" height="183" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1656185523194" />
+    <state width="1899" height="183" key="GridCell.Tab.0.center" timestamp="1656185523193">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="183" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1656099935321" />
-    <state width="1899" height="183" key="GridCell.Tab.0.left" timestamp="1656099935321">
+    <state width="1899" height="183" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1656185523193" />
+    <state width="1899" height="183" key="GridCell.Tab.0.left" timestamp="1656185523193">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="183" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1656099935321" />
-    <state width="1899" height="183" key="GridCell.Tab.0.right" timestamp="1656099935321">
+    <state width="1899" height="183" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1656185523193" />
+    <state width="1899" height="183" key="GridCell.Tab.0.right" timestamp="1656185523193">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="183" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1656099935321" />
+    <state width="1899" height="183" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1656185523193" />
     <state x="461" y="165" width="998" height="848" key="SettingsEditor" timestamp="1655909574366">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -147,5 +147,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1655629686160" />
+    <state x="667" y="255" width="585" height="530" key="find.popup" timestamp="1656185183834">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="255" width="585" height="530" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1656185183834" />
   </component>
 </project>

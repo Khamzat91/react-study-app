@@ -1,5 +1,4 @@
 import React from 'react';
-
 const options = {
   year: 'numeric',
   month: 'long',
@@ -8,8 +7,23 @@ const options = {
   minute: 'numeric'
 }
 
-const Comment = ({text, fullName, createdAt}) => {
+const Comment = ({id, userId, text, fullName, createdAt, setSelectEditComment, setText}) => {
   const date = new Date(createdAt)
+  const authUserId = JSON.parse(localStorage.getItem('user'))._id
+
+  const handleClickEditComment = () => {
+    setText(text)
+    setSelectEditComment(id)
+  }
+
+
+  const userEditComment = () => {
+    return "comment__item-edit " + (userId === authUserId ? 'active' : '')
+  }
+
+  const userDeleteComment = () => {
+    return "comment__item-delete " + (userId === authUserId ? 'active' : '')
+  }
 
   return (
     <div className="comment__item">
@@ -25,10 +39,10 @@ const Comment = ({text, fullName, createdAt}) => {
         {text}
       </div>
       <div className="comment__item-box">
-        <div className="comment__item-edit">
+        <div onClick={handleClickEditComment} className={userEditComment()}>
           Редактировать
         </div>
-        <div className="comment__item-delete">
+        <div className={userDeleteComment()}>
           Удалить
         </div>
       </div>

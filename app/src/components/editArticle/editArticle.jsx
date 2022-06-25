@@ -15,7 +15,6 @@ const EditArticle = () => {
     text: '',
     description: ''
   });
-  console.log(article)
   const handleChangeField = (e) => {
     setData({...data, [e.target.name]: e.target.value})
   }
@@ -25,7 +24,7 @@ const EditArticle = () => {
   }
 
   const handleClickDelete = () => {
-    dispatch(editArticleDelete(article._id, data))
+    dispatch(editArticleDelete(article._id))
     navigate('/')
   }
 

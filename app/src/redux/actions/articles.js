@@ -34,14 +34,12 @@ export const showArticle = (id) => async (dispatch) => {
   dispatch(setShowArticle(response.data))
 }
 
-export const editArticle = (id, data) => async (dispatch) => {
+export const editArticle = (id, data) => async () => {
   let token = await JSON.parse(localStorage.getItem('user')).token
-  let response = await axios.patch(`http://localhost:5656/posts/${id}`, data, {headers: {Authorization: token}})
-  dispatch(response.data)
+  await axios.patch(`http://localhost:5656/posts/${id}`, data, {headers: {Authorization: token}})
 }
 
-export const editArticleDelete = (id) => async (dispatch) => {
+export const editArticleDelete = (id) => async () => {
   let token = await JSON.parse(localStorage.getItem('user')).token
-  let response = await axios.delete(`http://localhost:5656/posts/${id}`, {headers: {Authorization: token}})
-  dispatch(response.data)
+  await axios.delete(`http://localhost:5656/posts/${id}`, {headers: {Authorization: token}})
 }

@@ -71,6 +71,7 @@ module.exports.update = async (req, res) => {
     const { error } = Joi.object({
       text: Joi.string().required().min(3).max(65536),
     }).validate(req.body);
+    console.log(req.body)
     if (error) {
       res.status(400).json({ error: error.details[0].message });
     } else {
