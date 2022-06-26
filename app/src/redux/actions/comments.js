@@ -23,3 +23,9 @@ export const editComment = (id, text, article) => async (dispatch) => {
   await axios.patch(`http://localhost:5656/comments/${id}`, {text}, {headers: {Authorization: token}})
   dispatch(getComments(article))
 }
+
+export const deleteComment = (id, article) => async (dispatch) => {
+  let token = JSON.parse(localStorage.getItem('user')).token
+  await axios.delete(`http://localhost:5656/comments/${id}`, {headers: {Authorization: token}})
+  dispatch(getComments(article))
+}

@@ -21,13 +21,17 @@ const RightHeader = ({handleClickToggle}) => {
     navigate('/')
   }
 
+  const onClickEditArticle = () => {
+    navigate('/editArticle')
+  }
+
   return (
     <div className="header">
       <a href="#"><img src={logo} alt="logo"/></a>
       <div className="header-icons">
         <img onClick={handleClickToggle} className="header-icon" src={search} alt=""/>
         {isAuth ? <>
-            <img className="header-icon" src={edit} alt=""/>
+            <img onClick={onClickEditArticle} className="header-icon" src={edit} alt=""/>
             <img onClick={handleClickIsAuth} className="header-icon" src={logout} alt=""/>
           </> :
           <Link to="/login"><img className="header-icon" src={user} alt=""/></Link>}

@@ -1,4 +1,7 @@
 import React from 'react';
+import {useParams} from "react-router-dom";
+import {useDispatch} from "react-redux";
+import {deleteComment} from "../../redux/actions/comments";
 const options = {
   year: 'numeric',
   month: 'long',
@@ -7,13 +10,20 @@ const options = {
   minute: 'numeric'
 }
 
-const Comment = ({id, userId, text, fullName, createdAt, setSelectEditComment, setText}) => {
+const Comment = ({idComment, userId, text, fullName, createdAt, setSelectEditComment, setText}) => {
+  const {id} = useParams()
+  const dispatch = useDispatch()
   const date = new Date(createdAt)
   const authUserId = JSON.parse(localStorage.getItem('user'))._id
 
   const handleClickEditComment = () => {
     setText(text)
-    setSelectEditComment(id)
+    setSelectEditComment(idComment)
+  }
+
+
+  const handleClickDeleteComment = () => {
+    dispatch(deleteComment(idComment, id))
   }
 
 
@@ -42,7 +52,7 @@ const Comment = ({id, userId, text, fullName, createdAt, setSelectEditComment, s
         <div onClick={handleClickEditComment} className={userEditComment()}>
           Редактировать
         </div>
-        <div className={userDeleteComment()}>
+        <div onClick={handleClickDeleteComment} className={userDeleteComment()}>
           Удалить
         </div>
       </div>

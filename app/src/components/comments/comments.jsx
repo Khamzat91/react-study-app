@@ -35,7 +35,7 @@ const Comments = () => {
       <div className="comment__title">Комментарии {comments.length}</div>
       <div className="comment__items">
         {comments.map((obj) => <Comment key={obj._id}
-                                        id={obj._id}
+                                        idComment={obj._id}
                                         userId={obj.user._id}
                                         text={obj.text}
                                         fullName={obj.user.fullName}
