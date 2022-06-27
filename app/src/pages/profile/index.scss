@@ -39,12 +39,14 @@
    padding-left: 30px;
    color: $bg;
    margin-right: 14px;
+   cursor: pointer;
    &.active{
     color: #36B55A;
    }
   }
   &-comment{
    color: $bg;
+   cursor: pointer;
    &.active{
     color: #36B55A;
    }

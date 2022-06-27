@@ -43,3 +43,6 @@ export const editArticleDelete = (id) => async () => {
   let token = await JSON.parse(localStorage.getItem('user')).token
   await axios.delete(`http://localhost:5656/posts/${id}`, {headers: {Authorization: token}})
 }
+
+
+

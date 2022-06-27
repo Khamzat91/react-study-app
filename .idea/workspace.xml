@@ -21,10 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="4f212264-8228-44cd-a60a-d54083258ed1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/components/comments/comment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/comments/comment.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/components/comments/comments.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/comments/comments.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/pages/profile/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/profile/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/pages/profile/profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/profile/profile.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/redux/actions/articles.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/redux/actions/articles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/redux/actions/comments.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/redux/actions/comments.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/redux/actions/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/redux/actions/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/redux/reducer/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/redux/reducer/user.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

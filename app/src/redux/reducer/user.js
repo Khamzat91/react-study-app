@@ -1,5 +1,6 @@
 const initialState = {
-  isAuth: false
+  isAuth: false,
+  articles: []
 }
 
 export const user = (state = initialState, action) => {
@@ -9,6 +10,12 @@ export const user = (state = initialState, action) => {
         ...state,
         isAuth: action.payload
       }
+    case 'SET_USER_ARTICLES':
+      return {
+        ...state,
+        articles: action.payload
+      }
+
 
     default:
       return state;
