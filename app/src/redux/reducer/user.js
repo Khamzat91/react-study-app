@@ -1,6 +1,7 @@
 const initialState = {
   isAuth: false,
-  articles: []
+  articles: [],
+  comments: []
 }
 
 export const user = (state = initialState, action) => {
@@ -14,6 +15,11 @@ export const user = (state = initialState, action) => {
       return {
         ...state,
         articles: action.payload
+      }
+    case 'SET_USER_COMMENTS':
+      return {
+        ...state,
+        comments: action.payload
       }
 
 

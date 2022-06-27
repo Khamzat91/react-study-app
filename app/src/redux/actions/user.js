@@ -1,4 +1,5 @@
 import axios from "axios";
+import {comments} from "../reducer/comments";
 
 
 export const setIsAuth = (isAuth) => ({
@@ -11,6 +12,10 @@ export const setUserArticles = (articles) => ({
   payload: articles
 })
 
+export const setUserComments = (comments) => ({
+  type: 'SET_USER_COMMENTS',
+  payload: comments
+})
 
 export const setUserData = (data, url) => async (dispatch) => {
   const response = await axios.post(`http://localhost:5656/auth/${url}`, data)
@@ -21,8 +26,11 @@ export const setUserData = (data, url) => async (dispatch) => {
 
 export const getProfileArticles = (id) => async (dispatch) => {
   let response = await axios.get(`http://localhost:5656/users/${id}`)
-  console.log(response)
-  // dispatch(setUserArticles(response.data))
+  dispatch(setUserArticles(response.data.posts.items))
+  dispatch(setUserComments(response.data.comments.items))
 }
+
+
+
 
 
